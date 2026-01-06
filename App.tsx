@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import HandwritingUploader from './components/HandwritingUploader.tsx';
-import ReviewDisplay from './components/ReviewDisplay.tsx';
-import { analyzeHandwriting } from './services/geminiService.ts';
-import { AppState } from './types.ts';
+import HandwritingUploader from './components/HandwritingUploader';
+import ReviewDisplay from './components/ReviewDisplay';
+import { analyzeHandwriting } from './services/geminiService';
+import { AppState } from './types';
 
 // Định nghĩa interface AIStudio và Window để khớp với môi trường và sửa lỗi TypeScript
 declare global {
@@ -13,8 +13,7 @@ declare global {
   }
 
   interface Window {
-    // Fix: Add readonly modifier to match existing environment declaration
-    readonly aistudio: AIStudio;
+    aistudio: AIStudio;
   }
 }
 
@@ -102,7 +101,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pb-20 px-4 pt-8 bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen pb-20 px-4 pt-8">
       {/* Nút quản lý chìa khóa ở góc phải màn hình */}
       <div className="fixed top-4 right-4 z-50">
         <button 

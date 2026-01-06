@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ReviewResult } from '../types.ts';
+import { ReviewResult } from '../types';
 
 interface Props {
   review: ReviewResult;

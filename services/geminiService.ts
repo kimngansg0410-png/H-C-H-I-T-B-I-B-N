@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
-import { ReviewResult } from "../types.ts";
+import { ReviewResult } from "../types";
 
 // Hàm phân tích chữ viết tay sử dụng mô hình Gemini
 export const analyzeHandwriting = async (base64Image: string): Promise<ReviewResult> => {
@@ -26,9 +26,9 @@ export const analyzeHandwriting = async (base64Image: string): Promise<ReviewRes
     - Lời nói thân thiện, không chê bai.
   `;
 
-  // Sử dụng ai.models.generateContent với model gemini-3-pro-preview cho các tác vụ phân tích hình ảnh cần suy luận sâu
+  // Sử dụng ai.models.generateContent trực tiếp với model gemini-3-flash-preview
   const response = await ai.models.generateContent({
-    model: 'gemini-3-pro-preview',
+    model: 'gemini-3-flash-preview',
     contents: {
       parts: [
         { text: prompt },

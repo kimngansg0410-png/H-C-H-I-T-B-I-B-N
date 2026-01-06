@@ -1,0 +1,7 @@
+{
+  "name": "Bé Bút Chì - Bạn Học Lớp 3",
+  "description": "Một ứng dụng giúp học sinh lớp 3 nhận xét bài viết của bạn mình một cách hồn nhiên, dễ thương và khích lệ.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

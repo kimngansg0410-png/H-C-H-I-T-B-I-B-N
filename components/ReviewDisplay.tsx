@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ReviewResult } from '../types';
+import { ReviewResult } from '../types.ts';
 
 interface Props {
   review: ReviewResult;
@@ -14,10 +14,10 @@ const ReviewDisplay: React.FC<Props> = ({ review }) => {
       <div className="absolute bottom-0 left-0 w-12 h-12 bg-yellow-100 rounded-tr-full -ml-3 -mb-3"></div>
       
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl">
-          ✏️
+        <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-2xl">
+          📖
         </div>
-        <h3 className="text-2xl font-bold text-blue-600">Lời nhắn từ Bé Bút Chì</h3>
+        <h3 className="text-2xl font-bold text-blue-600">Lời nhắn từ Cùng bạn học tập</h3>
       </div>
 
       <div className="space-y-6">
